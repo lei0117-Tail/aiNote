@@ -20,8 +20,51 @@
               "icon": "lucide-file",
               "title": "学习笔记"
             }
+          },
+          {
+            "id": "f20fcf23bc2fe3d0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "lang/chain.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "chain"
+            }
+          },
+          {
+            "id": "ef36a95a89857955",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "lang/graph.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "graph"
+            }
+          },
+          {
+            "id": "cabe6a76bcfd5746",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "lang/langGraph 并行执行的两种方式.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "langGraph 并行执行的两种方式"
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -156,13 +199,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "transformer学习/学习笔记.md",
+                "file": "lang/langGraph 并行执行的两种方式.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "学习笔记 的大纲"
+              "title": "langGraph 并行执行的两种方式 的大纲"
             }
           },
           {
@@ -205,14 +248,19 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "3fe578ec2ab6bc7a",
+  "active": "fff1c773135daf53",
   "lastOpenFiles": [
+    "lang/graph.md",
+    "lang/langGraph 并行执行的两种方式.md",
+    "lang/chain.md",
+    "transformer学习/学习笔记.md",
+    "未命名",
+    "lang",
     "transformer学习/add_norm_example.md",
     "transformer学习/referrence.md",
     "transformer学习/transformer_source_notes.md",
     "transformer学习/encoder_decoder_dataflow.md",
     "transformer学习/decoderLayer.md",
-    "transformer学习/学习笔记.md",
     "omo/4.2-后台任务运行模型.md",
     "transformer学习/encoderLayer.md",
     "agent说明.md",
@@ -223,7 +271,6 @@
     "欢迎.md",
     "omo/1.1-架构分析.md",
     "omo/0.导读-oh-my-openagent源码分析总览索引.md",
-    "未命名.md",
     "日常使用",
     "创建一个链接.md",
     "未命名.base",
