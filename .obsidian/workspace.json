@@ -8,63 +8,20 @@
         "type": "tabs",
         "children": [
           {
-            "id": "3fe578ec2ab6bc7a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "transformer学习/学习笔记.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "学习笔记"
-            }
-          },
-          {
-            "id": "f20fcf23bc2fe3d0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "lang/chain.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "chain"
-            }
-          },
-          {
-            "id": "ef36a95a89857955",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "lang/graph.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "graph"
-            }
-          },
-          {
             "id": "cabe6a76bcfd5746",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "omo/1.2-运行时执行链路.md",
+                "file": "PI-agent/M02-三层架构-Pi-Agent的骨骼.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.2-运行时执行链路"
+              "title": "M02-三层架构-Pi-Agent的骨骼"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -93,6 +50,16 @@
             }
           },
           {
+            "id": "eab4193ca42cb6cf",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          },
+          {
             "id": "a20ff934485f18cd",
             "type": "leaf",
             "state": {
@@ -107,16 +74,6 @@
               },
               "icon": "lucide-search",
               "title": "搜索"
-            }
-          },
-          {
-            "id": "eab4193ca42cb6cf",
-            "type": "leaf",
-            "state": {
-              "type": "bookmarks",
-              "state": {},
-              "icon": "lucide-bookmark",
-              "title": "书签"
             }
           }
         ]
@@ -201,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "omo/1.2-运行时执行链路.md",
+                "file": "PI-agent/M02-三层架构-Pi-Agent的骨骼.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -252,21 +209,26 @@
   },
   "active": "cabe6a76bcfd5746",
   "lastOpenFiles": [
-    "omo/1.3-Hooks治理层架构导读.md",
+    "PI-agent/M01-开篇-Pi-Agent总览.md",
+    "PI-agent/M02-三层架构-Pi-Agent的骨骼.md",
+    "PI-agent/0. 附带源码分析.md",
     "omo/0.导读-oh-my-openagent源码分析总览索引.md",
+    "transformer学习/encoderLayer.md",
+    "PI-agent",
+    "transformer学习/encoder_decoder_dataflow.md",
+    "transformer学习/add_norm_example.md",
+    "transformer学习/学习笔记.md",
+    "omo/1.2-运行时执行链路.md",
+    "omo/1.3-Hooks治理层架构导读.md",
     "lang/chain.md",
     "lang/graph.md",
     "lang/langGraph 并行执行的两种方式.md",
     "claude-code",
-    "transformer学习/学习笔记.md",
     "lang",
-    "transformer学习/add_norm_example.md",
     "transformer学习/referrence.md",
     "transformer学习/transformer_source_notes.md",
-    "transformer学习/encoder_decoder_dataflow.md",
     "transformer学习/decoderLayer.md",
     "omo/4.2-后台任务运行模型.md",
-    "transformer学习/encoderLayer.md",
     "agent说明.md",
     "未命名.canvas",
     "omo/4.3-Team-Mode协作模型导读.md",
