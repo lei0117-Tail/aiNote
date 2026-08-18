@@ -312,12 +312,47 @@ break;
 
 | 维度 | steering(叠加1) | followUp(叠加2) |
 |---|---|---|
+| 触发按键 | Enter | Alt+Enter |
 | 检查时机 | runLoop 开始前 + 内层每圈结尾 | 内层循环全部结束后 |
-| 语义 | "紧急插队"——工具执行间隙插入 | "排队等叫号"——等当前任务完成 |
-| 典型场景 | 用户工作时输入新指令 | 系统完成后追加"顺便跑个测试" |
+| 语义 | "紧急插队"——工具执行间隙插入 | "排队等叫号"——等当前任务告一段落 |
+| 前提 | agent 忙(`isStreaming=true`) | agent 忙(`isStreaming=true`) |
 
 > [!quote] 生活类比
-> steering 是你正在开会,有人敲门递了张纸条——"紧急,先看这个"。followUp 是开完会翻了翻信箱——"不急,但需要处理"。
+> steering 是你正在开会,有人敲门递了张纸条——"紧急,先看这个"。followUp 是会议还在进行,你写了张条子放进信箱——"不急,等这议题讲完再看"。
+
+### 4.11 三岔口:agent 忙 vs 空闲
+
+> [!question] 双层循环到底为谁服务?
+> 任务跑完两层都退出,下一轮对话本就是新循环;紧急消息内层就够;跑完后追加任务带历史上下文启动下一轮即可——那双层循环服务谁?
+
+答案:**双层循环只活在"agent 忙"这个分支**。分流判据不是消息内容,而是==按键==。`prompt()` 在 `isStreaming=true` 时直接抛错,强制 steer/followUp 二选一;空闲时才正常启动新 Trace。
+
+```js
+// agent-session.ts:1167(基于 0.84.2)
+if (this.isStreaming) {
+    if (!options?.streamingBehavior)
+        throw new Error("Agent is already processing. Specify streamingBehavior ('steer' or 'followUp')...");
+    if (options.streamingBehavior === "followUp") await this._queueFollowUp(...);
+    else await this._queueSteer(...);
+    return;
+}
+// ↓ 空闲才走到这里:新 Trace
+```
+
+| 按键 | handler | streamingBehavior | 队列 | 消化者 | 源码(0.84.2) |
+|---|---|---|---|---|---|
+| Enter | `onSubmit` | `"steer"` | steeringQueue | 内层 | `interactive-mode.ts:3070` |
+| Alt+Enter | `handleFollowUp` | `"followUp"` | followUpQueue | 外层 | `interactive-mode.ts:4012` |
+
+> [!note] 空闲时 Alt+Enter 退化成 Enter
+> `interactive-mode.ts:4016`:`isStreaming` 为 false 时 Alt+Enter 直接走 `onSubmit`——开新 Trace。排队语义在空闲时无对象,自动失效。
+
+```
+agent 忙:Enter→steer→内层;Alt+Enter→followUp→外层
+agent 空闲:Enter/Alt+Enter 都→prompt()→新 Trace(带历史上下文)
+```
+
+"跑完后手动追加任务带历史上下文启动下一轮"走的是==空闲分支==,和双层循环无关。双层循环是 agent 忙时排队消息的==自驱动出口==:followUp 不能走内层(会退化成插队,失去"等叫号"语义),也不能等用户手动开新 Trace(塞入时 agent 正忙,`prompt()` 抛错;且语义会从"当前任务延续"错位成"新意图")。外层循环让 Loop 在内层整轮退出后主动 drain 一次,自驱动续命。
 
 ---
 
@@ -351,3 +386,5 @@ break;
 
 > [!note]- 版本说明
 > 基于 Pi **v0.80.2**,代码分析以 earendil-works/pi 仓库实际源码为准。原文:[dg-ai-notes.pages.dev/modules/ch03-agent-loop](https://dg-ai-notes.pages.dev/modules/ch03-agent-loop/)
+>
+> 4.11 节的按键映射与 `prompt()` 分流逻辑经 **v0.84.2** 源码复核,行号以 0.84.2 为准。
