@@ -30,15 +30,15 @@ Pi 有 ==三个身份==,指向同一个项目:
 
 ## 关键数字(v0.80.2)
 
-| 指标 | 数值 | 含义 |
-|---|---|---|
-| GitHub Stars | 64,000+ | 十个月增长,社区验证需求 |
-| 内置工具 | 4 核心 + 3 辅助 | 核心:`read`/`write`/`edit`/`bash`;辅助:`grep`/`find`/`ls` |
-| 系统提示词 | 静态模板 ~90 词(运行时 200-400 词) | 对比 Claude Code 的数万字 |
-| TUI 代码量 | ~12,000 行 | 核心 `tui.ts` 单文件约 1,700 行 |
-| 支持供应商 | 35 个 KnownProvider(约 27 个独立品牌) | Anthropic/OpenAI/Google/Groq/Ollama 等 |
-| 核心包数量 | 4 个 | `pi-ai` / `pi-agent-core` / `pi-tui` / `pi-coding-agent` |
-| 运行模式 | 4 种 | 交互 / print-JSON / RPC / SDK |
+| 指标           | 数值                             | 含义                                                       |
+| ------------ | ------------------------------ | -------------------------------------------------------- |
+| GitHub Stars | 64,000+                        | 十个月增长,社区验证需求                                             |
+| 内置工具         | 4 核心 + 3 辅助                    | 核心:`read`/`write`/`edit`/`bash`;辅助:`grep`/`find`/`ls`    |
+| 系统提示词        | 静态模板 ~90 词(运行时 200-400 词)      | 对比 Claude Code 的数万字                                      |
+| TUI 代码量      | ~12,000 行                      | 核心 `tui.ts` 单文件约 1,700 行                                 |
+| 支持供应商        | 35 个 KnownProvider(约 27 个独立品牌) | Anthropic/OpenAI/Google/Groq/Ollama 等                    |
+| 核心包数量        | 4 个                            | `pi-ai` / `pi-agent-core` / `pi-tui` / `pi-coding-agent` |
+| 运行模式         | 4 种                            | 交互 / print-JSON / RPC / SDK                              |
 
 > [!note] 数字勘误
 > 官网早期营销材料常说"4 个内置工具"、"15+ 供应商"、"约 600 行 TUI"——前两者指核心 4 工具(不含辅助)和早期知名厂商,"600 行 TUI"是早期版本。v0.80.2 实际已增长到约 12,000 行。

@@ -8,17 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "cabe6a76bcfd5746",
+            "id": "c61e78b8b790f729",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PI-agent/M03-Agent-Loop-让模型转动的引擎.md",
+                "file": "PI-agent/M01-开篇-Pi-Agent总览.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "M03-Agent-Loop-让模型转动的引擎"
+              "title": "M01-开篇-Pi-Agent总览"
             }
           }
         ]
@@ -46,7 +46,7 @@
                 "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
-              "title": "文件列表"
+              "title": "Files"
             }
           },
           {
@@ -73,7 +73,7 @@
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
-              "title": "搜索"
+              "title": "Search"
             }
           }
         ]
@@ -158,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PI-agent/M03-Agent-Loop-让模型转动的引擎.md",
+                "file": "# Jev：System One 决策模型 介绍与本地实践.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -192,37 +192,42 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:打开快速切换": false,
-      "graph:查看关系图谱": false,
-      "canvas:新建白板": false,
-      "daily-notes:打开/创建今天的日记": false,
-      "templates:插入模板": false,
-      "command-palette:打开命令面板": false,
-      "bases:新建数据库": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
       "obsidian-excalidraw-plugin:New drawing": false,
       "templater-obsidian:Templater": false
     }
   },
-  "active": "cabe6a76bcfd5746",
+  "active": "c61e78b8b790f729",
   "lastOpenFiles": [
+    "PI-agent/0. 附带源码分析.md",
+    "# Jev：System One 决策模型 介绍与本地实践.md",
+    "Pasted image 20260923141851.png",
     "PI-agent/M01-开篇-Pi-Agent总览.md",
     "PI-agent/M02-三层架构-Pi-Agent的骨骼.md",
-    "PI-agent/0. 附带源码分析.md",
+    "lang/langGraph 并行执行的两种方式.md",
+    "lang/graph.md",
+    "lang/chain.md",
+    "transformer学习/add_norm_example.md",
+    "PI-agent/M03-Agent-Loop-让模型转动的引擎.md",
+    "未命名",
     "omo/0.导读-oh-my-openagent源码分析总览索引.md",
     "transformer学习/encoderLayer.md",
     "PI-agent",
     "transformer学习/encoder_decoder_dataflow.md",
-    "transformer学习/add_norm_example.md",
     "transformer学习/学习笔记.md",
     "omo/1.2-运行时执行链路.md",
     "omo/1.3-Hooks治理层架构导读.md",
-    "lang/chain.md",
-    "lang/graph.md",
-    "lang/langGraph 并行执行的两种方式.md",
     "claude-code",
     "lang",
     "transformer学习/referrence.md",
@@ -237,10 +242,8 @@
     "欢迎.md",
     "omo/1.1-架构分析.md",
     "日常使用",
-    "创建一个链接.md",
     "未命名.base",
     "未命名 1.base",
-    "transformer学习",
-    "创建链接.md"
+    "transformer学习"
   ]
 }
